@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav className="nav-bar">
-      <h2 className="nav-brand"><a href="/">Space Travellers' Hub</a></h2>
+      <h2 className="nav-brand"><a href="/">Space Travellers Hub</a></h2>
       <ul className="nav-links">
         {links.map((link) => (
           <li className="nav-link" key={link.id}>
