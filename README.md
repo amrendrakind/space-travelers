@@ -18,11 +18,11 @@ You can find live project at https://amrendrakind.github.io/space-travelers/
 - JavaScripts
 - GitFlow
 
-## Live Demo (Link for My BookStore Project)
+## Live Demo (Link for Our Space Travellers Project)
 
 ### Github
 
-Take a look at the BookStore page [BookStore@GitHub](https://amrendrakind.github.io/space-travelers)
+Take a look at the space-travelers page [space-travelers@GitHub](https://amrendrakind.github.io/space-travelers)
 
 ## Development set up
 
