@@ -1,0 +1,104 @@
+.account-icon {
+  padding: 9px 12px;
+  border: 1px solid #c9c9c9;
+  border-radius: 50%;
+}
+
+.user-icon {
+  font-size: 15px;
+  color: #0290ff;
+}
+
+.nav-bar {
+  padding: 24px 4%;
+  background-color: white;
+  border-bottom: solid 1px #e8e8e8;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-brand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #0290ff;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  flex-grow: 1;
+  list-style-type: none;
+  gap: 40px;
+}
+
+.nav-link {
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.813rem;
+  color: #121212;
+  letter-spacing: 1.9px;
+}
+
+.spacelogo {
+  height: 60px;
+  width: 60px;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  padding: 20px 0 20px;
+  vertical-align: middle;
+}
+
+a {
+  position: relative;
+  display: block;
+  padding: 16px 0;
+  margin: 0 12px;
+  letter-spacing: 1px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #999;
+  text-decoration: none;
+}
+
+a::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: color 0.1s, transform 0.2s ease-out;
+}
+
+a:active::before {
+  background-color: #000;
+}
+
+a:hover::before,
+a:focus::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
