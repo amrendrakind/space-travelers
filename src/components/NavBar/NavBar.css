@@ -9,10 +9,6 @@
   color: #0290ff;
 }
 
-a {
-  text-decoration: none;
-}
-
 .nav-bar {
   padding: 24px 4%;
   background-color: white;
@@ -27,6 +23,7 @@ a {
   font-size: 1.875rem;
   font-weight: bold;
   color: #0290ff;
+  cursor: pointer;
 }
 
 .nav-links {
@@ -44,27 +41,20 @@ a {
   letter-spacing: 1.9px;
 }
 
-.active-link {
-  /* opacity: 1;
-  color: #121212; */
-}
-
 .spacelogo {
   height: 60px;
   width: 60px;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
+
 li {
   display: inline-block;
   padding: 20px 0 20px;
   vertical-align: middle;
-}
-a:hover, a:focus, a:active {
-  color: #999;
-  text-decoration: none;
 }
 
 a {
@@ -77,9 +67,18 @@ a {
   line-height: 16px;
   font-weight: 900;
   text-transform: uppercase;
-  transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+  transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
   color: #000;
+  text-decoration: none;
 }
+
+a:hover,
+a:focus,
+a:active {
+  color: #999;
+  text-decoration: none;
+}
+
 a::before {
   content: '';
   display: block;
@@ -91,12 +90,15 @@ a::before {
   background-color: #000;
   transform-origin: right top;
   transform: scale(0, 1);
-  transition: color 0.1s,transform 0.2s ease-out;
+  transition: color 0.1s, transform 0.2s ease-out;
 }
+
 a:active::before {
   background-color: #000;
 }
-a:hover::before, a:focus::before {
+
+a:hover::before,
+a:focus::before {
   transform-origin: left top;
   transform: scale(1, 1);
 }
