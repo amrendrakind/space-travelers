@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaUser } from 'react-icons/fa';
 import './NavBar.css';
+import image from '../../SpaceLogo.png';
 
 const Navbar = () => {
   const links = [
@@ -29,17 +29,17 @@ const Navbar = () => {
 
   return (
     <nav className="nav-bar">
+      <img className="spacelogo" src={image} alt="spacelogo" />
       <h2 className="nav-brand"><a href="/">Space Travellers Hub</a></h2>
       <ul className="nav-links">
         {links.map((link) => (
           <li className="nav-link" key={link.id}>
-            <NavLink to={link.path} exact="true">
+            <NavLink to={link.path}>
               {link.text}
             </NavLink>
           </li>
         ))}
       </ul>
-      <div className="account-icon"><FaUser className="user-icon" /></div>
     </nav>
   );
 };
