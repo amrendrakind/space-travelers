@@ -4,7 +4,13 @@ import { GET_ROCKET_DATA, ROCKET_RESERVATION, CANCEL_ROCKET_RESERVATION } from '
 const initialState = [];
 
 export function getRocketAPI(rockets) {
-  const APIRocketData = Object.entries(rockets).map(([key, value]) => ({ ...value[0], id: key }));
+  const APIRocketData = rockets.map((rocket) => ({
+    id: rocket.id,
+    name: rocket.rocket_name,
+    type: rocket.rocket_type,
+    flickrImages: rocket.flickr_images,
+    description: rocket.description,
+  }));
   return {
     type: GET_ROCKET_DATA,
     payload: APIRocketData,
