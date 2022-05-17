@@ -16,3 +16,8 @@ export const getDragons = () => async (dispatch) => {
   });
   store = true;
 };
+
+export const reserveDragons = (id) => ({
+	type: RESERVEDRAGON,
+	id,
+  });
