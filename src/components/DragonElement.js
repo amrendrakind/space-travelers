@@ -38,3 +38,13 @@ const DragonElement = (props) => {
 		</div>
 	  );
 	};
+
+	DragonElement.propTypes = {
+		id: PropTypes.string.isRequired,
+		name: PropTypes.string.isRequired,
+		reserved: PropTypes.bool,
+		description: PropTypes.string.isRequired,
+		flickrImages: PropTypes.string.isRequired,
+	  };
+
+	  export default DragonElement;
