@@ -13,3 +13,5 @@ const rootReducer = combineReducers({
 	rootReducer,
 	applyMiddleware(thunk),
   );
+
+  export default store;
