@@ -18,41 +18,40 @@ export const getDragons = () => async (dispatch) => {
 };
 
 export const reserveDragons = (id) => ({
-	type: RESERVEDRAGON,
-	id,
-  });
+  type: RESERVEDRAGON,
+  id,
+});
 
-  export const unreserveDragons = (id) => ({
-	type: UNRESERVEDRAGON,
-	id,
-  });
-
+export const unreserveDragons = (id) => ({
+  type: UNRESERVEDRAGON,
+  id,
+});
 
 const reducer = (state = initialState, action) => {
-	switch (action.type) {
-	  case FETCHROCKETS:
-		return action.newState;
-	  case RESERVEDRAGON: {
-		const valState = state.map((dragon) => {
-		  if (dragon.dragon_id !== action.id) {
-			return dragon;
-		  }
-		  return { ...dragon, reserved: true };
-		});
-		return valState;
-	  }
-	  case UNRESERVEROCKET: {
-		const valState = state.map((rocket) => {
-		  if (rocket.rocket_id !== action.id) {
-			return rocket;
-		  }
-		  return { ...rocket, reserved: false };
-		});
-		return valState;
-	  }
-	  default:
-		return state;
-	}
-  };
+  switch (action.type) {
+    case FETCHDRAGON:
+      return action.newState;
+    case RESERVEDRAGON: {
+      const valState = state.map((dragon) => {
+        if (dragon.dragon_id !== action.id) {
+          return dragon;
+        }
+        return { ...dragon, reserved: true };
+      });
+      return valState;
+    }
+    case UNRESERVEDRAGON: {
+      const valState = state.map((dragon) => {
+        if (dragon.dragon_id !== action.id) {
+          return dragon;
+        }
+        return { ...dragon, reserved: false };
+      });
+      return valState;
+    }
+    default:
+      return state;
+  }
+};
 
-  export default reducer;
+export default reducer;
