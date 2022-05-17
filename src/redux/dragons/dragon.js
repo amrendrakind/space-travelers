@@ -26,3 +26,18 @@ export const reserveDragons = (id) => ({
 	type: UNRESERVEDRAGON,
 	id,
   });
+
+
+const reducer = (state = initialState, action) => {
+	switch (action.type) {
+	  case FETCHROCKETS:
+		return action.newState;
+	  case RESERVEDRAGON: {
+		const valState = state.map((dragon) => {
+		  if (dragon.dragon_id !== action.id) {
+			return dragon;
+		  }
+		  return { ...dragon, reserved: true };
+		});
+		return valState;
+	  }
