@@ -21,3 +21,8 @@ export const reserveDragons = (id) => ({
 	type: RESERVEDRAGON,
 	id,
   });
+
+  export const unreserveDragons = (id) => ({
+	type: UNRESERVEDRAGON,
+	id,
+  });
