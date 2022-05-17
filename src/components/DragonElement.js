@@ -22,3 +22,19 @@ const DragonElement = (props) => {
 	  };
 	  const reservation = reserved ? 'Cancel Reservation' : 'Reserve Rocket';
 	  const btnClass = reserved ? 'grayBtn' : 'blueBtn';
+	  return (
+		<div className="DragonEl">
+		  <div className="dragonImg">
+			<img src={flickrImages} alt={dragon_type} />
+		  </div>
+		  <div>
+			<h2>{name}</h2>
+			<p>
+			  {(reserved) && (<span className="badge">Reserved</span>)}
+			  {dragon_type}
+			</p>
+			<button className={btnClass} type="button" id={id} onClick={reserveDragonHandler}>{reservation}</button>
+		  </div>
+		</div>
+	  );
+	};
