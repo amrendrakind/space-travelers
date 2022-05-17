@@ -41,3 +41,16 @@ const reducer = (state = initialState, action) => {
 		});
 		return valState;
 	  }
+	  case UNRESERVEROCKET: {
+		const valState = state.map((rocket) => {
+		  if (rocket.rocket_id !== action.id) {
+			return rocket;
+		  }
+		  return { ...rocket, reserved: false };
+		});
+		return valState;
+	  }
+	  default:
+		return state;
+	}
+  };
