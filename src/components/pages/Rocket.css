@@ -22,8 +22,8 @@
   font-size: 25px;
   font-weight: 600;
 }
-.rocket .reserve-rocket-button {
-  width: 20%;
+.rocket .rocket-content .reserve-rocket-button {
+  width: 180px;
   cursor: pointer;
   border: none;
   background-color: #0290ff;

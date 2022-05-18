@@ -47,7 +47,7 @@ export default function reducerRockets(state = initialState, action) {
         rocket.id !== action.payload ? rocket : { ...rocket, reserved: true }));
     case CANCEL_ROCKET_RESERVATION:
       return state.map((rocket) => (
-        rocket.id !== action.payload ? rocket : { ...rocket, reserved: true }));
+        rocket.id !== action.payload ? rocket : { ...rocket, reserved: false }));
     default:
       return state;
   }
