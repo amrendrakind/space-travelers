@@ -11,4 +11,4 @@ const getRocketData = async () => {
   return rocketData;
 };
 
-export default getRocketData;
+export default { getRocketData };

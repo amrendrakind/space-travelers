@@ -18,8 +18,10 @@ export function getRocketAPI(rockets) {
 }
 
 export const rocketFromAPI = () => async (dispatch) => {
-  const response = await APIServices.getRocketData();
-  dispatch(getRocketAPI(response));
+  setTimeout(async () => {
+    const response = await APIServices.getRocketData();
+    dispatch(getRocketAPI(response));
+  }, 1000);
 };
 
 export function rocketReservation(id) {

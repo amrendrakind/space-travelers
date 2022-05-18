@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { rocketFromAPI } from '../../redux/rockets/rockets';
+import RocketItem from './RocketItem';
 
 function Rockets() {
+  const dispatch = useDispatch();
+  const rocket = useSelector((state) => state.Rockets);
+
+  useEffect(() => {
+    dispatch(rocketFromAPI());
+  }, [dispatch]);
+
   return (
-    <div>
-      <h1>Welcome to Space Tavellers Rocket page!</h1>
-    </div>
+    <ul className="rocket-list-conatiner">
+      {rocket.map((rocket) => (
+        <RocketItem
+          key={rocket.id}
+          rocket={rocket}
+        />
+      ))}
+    </ul>
   );
 }
+
 export default Rockets;
