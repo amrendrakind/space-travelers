@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Rocket.css';
 
 function RocketItem(props) {
   const { rocket } = props;
@@ -9,16 +10,17 @@ function RocketItem(props) {
 
   return (
     <li key={id}>
-      <div className="image-container">
-        <img src={flickrImages[0]} alt={name} />
-      </div>
-      <div className="content">
-        <h3>
-          {' '}
-          {name}
-        </h3>
-        <p>{description}</p>
-        <button type="button">Reserve Rocket</button>
+      <div className="rocket">
+        <div className="image-container">
+          <img src={flickrImages[0]} alt={name} />
+        </div>
+        <div className="rocket-content">
+          <h3 className="rocket-name">
+            {name}
+          </h3>
+          <p>{description}</p>
+          <button className="reserve-rocket-button" type="button">Reserve Rocket</button>
+        </div>
       </div>
     </li>
   );
