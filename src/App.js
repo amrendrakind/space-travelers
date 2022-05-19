@@ -3,10 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import NotFound from './components/pages/NotFound';
 import MissionsContainer from './components/pages/MissionsContainer';
-import ProfileContainer from './components/pages/ProfileContainer';
-import Rockets from './components/pages/Rockets';
-
+import Rockets from './components/rockets/Rockets';
 import NavBar from './components/NavBar/NavBar';
+import ProfileContainer from './components/pages/ProfileContainer';
 
 function App() {
   return (
