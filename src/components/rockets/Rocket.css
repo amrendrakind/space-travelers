@@ -49,19 +49,20 @@
 .cancel-reservation-button {
   width: 180px;
   cursor: pointer;
-  border: none;
-  background-color: #f82929;
+  background-color: #fff;
+  border: 1px solid rgb(120, 116, 116);
   border-radius: 3px;
   padding: 8px 20px;
   font-family: "Roboto Slab", serif;
   font-weight: 300;
   font-size: 16px;
   letter-spacing: 0.5px;
-  color: #fff;
+  color: rgb(120, 116, 116);
 }
 
 .cancel-reservation-button:hover {
   background-color: #b80000;
+  color: #fff;
 }
 
 .profile-rocket-list-conatiner {

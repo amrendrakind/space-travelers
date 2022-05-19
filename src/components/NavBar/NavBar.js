@@ -29,6 +29,10 @@ const Navbar = () => {
 
   return (
     <nav className="nav-bar">
+
+      <div className="brand-logo-container">
+        <img className="spacelogo" src={image} alt="spacelogo" />
+      </div>
       <img className="spacelogo" src={image} alt="spacelogo" />
       <h2 className="nav-brand">Space Travellers&apos; Hub</h2>
       <ul className="nav-links">
@@ -39,6 +43,7 @@ const Navbar = () => {
             </NavLink>
           </li>
         ))}
+
       </ul>
     </nav>
   );
