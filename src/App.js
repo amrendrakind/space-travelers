@@ -6,6 +6,8 @@ import Dragons from './components/dragons';
 
 import NavBar from './components/NavBar/NavBar';
 
+import Profile from './components/my-profile';
+
 function App() {
   return (
     <>
@@ -15,7 +17,7 @@ function App() {
           <Route path="/rockets" exact="true" element={<NotFound />} />
           <Route path="/missions" element={<NotFound />} />
           <Route path="/dragons" element={<Dragons />} />
-          <Route path="/myprofile" element={<NotFound />} />
+          <Route path="/myprofile" element={<Profile />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 
