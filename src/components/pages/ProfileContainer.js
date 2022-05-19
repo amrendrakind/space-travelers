@@ -1,4 +1,4 @@
-import ProfileMissions from '../MissionsComponents/ProfileMissions';
+import ProfileMissions from '../missions/ProfileMissions';
 import ProfileRocket from '../rockets/ProfileRocket';
 import ProfileDragon from './ProfileDragon';
 

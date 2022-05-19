@@ -65,11 +65,15 @@
   color: #fff;
 }
 
+.profile-rocket-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .profile-rocket-list-conatiner {
   list-style-type: none;
   width: 90%;
   border: 1px solid #e8e8e8;
-  border-radius: 20px;
   margin: 0;
   padding: 0;
   display: flex;
@@ -77,11 +81,8 @@
 }
 
 .profile-rocket-name {
-  background-color: #fff;
-  border-radius: 20px;
-  border: 1px solid #e8e8e8;
-  padding: 0.5rem;
-  font-size: 25px;
+  padding: 10px;
+  border: solid #ddd 1px;
 }
 
 .status {

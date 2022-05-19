@@ -2,6 +2,7 @@ import APIServices from './APIServices';
 import { GET_ROCKET_DATA, ROCKET_RESERVATION, CANCEL_ROCKET_RESERVATION } from '../types';
 
 const initialState = [];
+let Loading = false;
 
 export function getRocketAPI(rockets) {
   const APIRocketData = rockets.map((rocket) => ({
@@ -18,10 +19,12 @@ export function getRocketAPI(rockets) {
 }
 
 export const rocketFromAPI = () => async (dispatch) => {
+  if (Loading) return;
   setTimeout(async () => {
     const response = await APIServices.getRocketData();
     dispatch(getRocketAPI(response));
   }, 1000);
+  Loading = true;
 };
 
 export function rocketReservation(id) {

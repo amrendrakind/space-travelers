@@ -10,17 +10,19 @@ const ProfileRocket = () => {
   if (!filteredRocket.length) { status = 'No Rockets reserved'; }
   return (
     <>
-      <h2>My Rockets</h2>
-      <ul className="profile-rocket-list-conatiner">
+      <div className="profile-rocket-container">
+        <h2>My Rockets</h2>
+        <ul className="profile-rocket-list-conatiner">
 
-        {status
-          ? <div className="status">{status}</div> : (filteredRocket.map((rocket) => (
-            <ProfileRocketItem
-              key={rocket.id}
-              rocket={rocket}
-            />
-          )))}
-      </ul>
+          {status
+            ? <div className="status">{status}</div> : (filteredRocket.map((rocket) => (
+              <ProfileRocketItem
+                key={rocket.id}
+                rocket={rocket}
+              />
+            )))}
+        </ul>
+      </div>
     </>
   );
 };

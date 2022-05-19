@@ -27,13 +27,12 @@ code {
 }
 
 .profileContainer {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
 }
 
 .wrapper {
-  width: 48%;
+  width: auto;
 }
 
 .my-missions {
