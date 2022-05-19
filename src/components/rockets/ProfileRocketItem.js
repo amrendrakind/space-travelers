@@ -10,7 +10,7 @@ const ProfileRocketItem = (props) => {
       key={id}
       className="profile-rocket-name"
     >
-      <p>{name}</p>
+      <h3>{name}</h3>
     </li>
   );
 };
