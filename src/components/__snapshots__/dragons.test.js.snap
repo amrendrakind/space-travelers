@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dragons component component match with the snapshot 1`] = `
+<section>
+  <ul
+    className="dragonsList"
+  />
+</section>
+`;
