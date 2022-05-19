@@ -5,7 +5,7 @@ import NotFound from './components/pages/NotFound';
 import Dragons from './components/dragon/dragons';
 import MissionsContainer from './components/pages/MissionsContainer';
 import Rockets from './components/rockets/Rockets';
-import NavBar from './components/NavBar/NavBar';
+import NavBar from './components/navbar/NavBar';
 import ProfileContainer from './components/pages/ProfileContainer';
 
 function App() {
