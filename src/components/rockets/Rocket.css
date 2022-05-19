@@ -65,6 +65,11 @@
   color: #fff;
 }
 
+.profile-rocket-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .profile-rocket-list-conatiner {
   list-style-type: none;
   width: 90%;
