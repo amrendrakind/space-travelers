@@ -10,7 +10,7 @@ const ProfileRocket = () => {
   if (!filteredRocket.length) { status = 'No Rockets reserved'; }
   return (
     <>
-      <div>
+      <div className="profile-rocket-container">
         <h2>My Rockets</h2>
         <ul className="profile-rocket-list-conatiner">
 
