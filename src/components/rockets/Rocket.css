@@ -1,0 +1,86 @@
+.rocket-list-conatiner {
+  padding: 24px 3%;
+}
+
+.rocket {
+  display: flex;
+  flex-direction: row;
+}
+
+.rocket .image-container {
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+}
+
+.image-container img {
+  width: 300px;
+  height: 200px;
+}
+
+.rocket .rocket-content .rocket-name {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.rocket .rocket-content .reserve-rocket-button {
+  width: 180px;
+  cursor: pointer;
+  border: none;
+  background-color: #0290ff;
+  border-radius: 3px;
+  padding: 8px 20px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.cancel-reservation-button {
+  width: 180px;
+  cursor: pointer;
+  border: none;
+  background-color: #f82929;
+  border-radius: 3px;
+  padding: 8px 20px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.cancel-reservation-button:hover {
+  background-color: #b80000;
+}
+
+.profile-rocket-list-conatiner {
+  list-style-type: none;
+  width: 90%;
+  border: 1px solid #e8e8e8;
+  border-radius: 20px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-rocket-name {
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid #e8e8e8;
+  padding: 0.5rem;
+  font-size: 25px;
+}
+
+.status {
+  border: 1px solid red;
+  border-radius: 20px;
+  color: red;
+  margin-top: 15px;
+  margin-left: 10px;
+  padding: 15px;
+  width:fit-content;
+  margin-bottom: 20px;
+}

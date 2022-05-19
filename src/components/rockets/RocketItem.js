@@ -30,7 +30,7 @@ function RocketItem(props) {
           </h3>
           {rocket.reserved ? <span>Reserved</span> : null}
           <p>{description}</p>
-          {rocket.reserved ? <button type="button" onClick={cancelRocketBooking} className="btn-cancel">Cancel Reservation</button> : <button className="reserve-rocket-button" type="button" onClick={rocketBooking}>Reserve Rocket</button>}
+          {rocket.reserved ? <button type="button" onClick={cancelRocketBooking} className="cancel-reservation-button">Cancel Reservation</button> : <button className="reserve-rocket-button" type="button" onClick={rocketBooking}>Reserve Rocket</button>}
         </div>
       </div>
     </li>
