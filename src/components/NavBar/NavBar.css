@@ -9,6 +9,20 @@
   color: #0290ff;
 }
 
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 3%;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.brand-logo-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .nav-bar {
   padding: 24px 4%;
   background-color: white;
@@ -28,13 +42,13 @@
 
 .nav-links {
   display: flex;
+  justify-content: flex-end;
   flex-grow: 1;
   list-style-type: none;
-  gap: 40px;
+  gap: 1px;
 }
 
 .nav-link {
-  opacity: 0.5;
   font-family: "Montserrat", sans-serif;
   font-size: 0.813rem;
   color: #121212;
@@ -42,6 +56,7 @@
 }
 
 .spacelogo {
+  padding: 15px;
   height: 60px;
   width: 60px;
 }
@@ -57,10 +72,18 @@ li {
   vertical-align: middle;
 }
 
+.nav-bar ul li {
+  padding: 0;
+}
+
+.nav-bar ul li:last-child {
+  border-left: 2px solid black;
+}
+
 a {
   position: relative;
   display: block;
-  padding: 16px 0;
+  padding: 5px 0;
   margin: 0 12px;
   letter-spacing: 1px;
   font-size: 12px;
@@ -68,33 +91,41 @@ a {
   font-weight: 900;
   text-transform: uppercase;
   transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
-  color: #000;
+  color: #0290ff;
   text-decoration: none;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: #999;
+  color: #0290ff;
+  font-weight: 600;
   text-decoration: none;
 }
 
+a:focus,
+a:active {
+  font-size: 15px;
+  font-weight: bold;
+  color: #0290ff;
+}
+
 a::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   bottom: 3px;
   left: 0;
   height: 3px;
   width: 100%;
-  background-color: #000;
+  background-color: #0290ff;
   transform-origin: right top;
   transform: scale(0, 1);
   transition: color 0.1s, transform 0.2s ease-out;
 }
 
 a:active::before {
-  background-color: #000;
+  background-color: #0290ff;
 }
 
 a:hover::before,

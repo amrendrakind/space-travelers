@@ -29,8 +29,10 @@ const Navbar = () => {
 
   return (
     <nav className="nav-bar">
-      <img className="spacelogo" src={image} alt="spacelogo" />
-      <h2 className="nav-brand">Space Travellers Hub</h2>
+      <div className="brand-logo-container">
+        <img className="spacelogo" src={image} alt="spacelogo" />
+        <h2 className="nav-brand">Space Travellers Hub</h2>
+      </div>
       <ul className="nav-links">
         {links.map((link) => (
           <li className="nav-link" key={link.id}>
@@ -39,6 +41,7 @@ const Navbar = () => {
             </NavLink>
           </li>
         ))}
+
       </ul>
     </nav>
   );
