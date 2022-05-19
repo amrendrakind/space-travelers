@@ -23,6 +23,15 @@
   font-weight: 600;
 }
 
+.rocket-reserved {
+  background-color: #2998a9;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  margin-right: 5px;
+  padding: 3px 10px;
+}
+
 .rocket .rocket-content .reserve-rocket-button {
   width: 180px;
   cursor: pointer;
