@@ -8,7 +8,7 @@ import Rockets from './components/rockets/Rockets';
 import NavBar from './components/NavBar/NavBar';
 import ProfileContainer from './components/pages/ProfileContainer';
 
-import Profile from './components/my-profile';
+import Profile from './components/pages/ProfileDragon';
 
 function App() {
   return (

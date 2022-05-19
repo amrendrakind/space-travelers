@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import './my-profile.css';
+import './dragon-profile.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { getDragons } from '../redux/dragons/Dragons';
+import { getDragons } from '../../redux/dragons/Dragons';
 
 const Profile = () => {
   const dispatch = useDispatch();
