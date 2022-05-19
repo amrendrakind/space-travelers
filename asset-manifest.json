@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/space-travelers/static/css/main.5cd952b9.css",
-    "main.js": "/space-travelers/static/js/main.4295f8b5.js",
+    "main.css": "/space-travelers/static/css/main.49163e2b.css",
+    "main.js": "/space-travelers/static/js/main.0e184c53.js",
     "static/js/787.bfd02cd8.chunk.js": "/space-travelers/static/js/787.bfd02cd8.chunk.js",
     "static/media/SpaceLogo.png": "/space-travelers/static/media/SpaceLogo.27109cd3d329612a6ec3.png",
     "index.html": "/space-travelers/index.html",
-    "main.5cd952b9.css.map": "/space-travelers/static/css/main.5cd952b9.css.map",
-    "main.4295f8b5.js.map": "/space-travelers/static/js/main.4295f8b5.js.map",
+    "main.49163e2b.css.map": "/space-travelers/static/css/main.49163e2b.css.map",
+    "main.0e184c53.js.map": "/space-travelers/static/js/main.0e184c53.js.map",
     "787.bfd02cd8.chunk.js.map": "/space-travelers/static/js/787.bfd02cd8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5cd952b9.css",
-    "static/js/main.4295f8b5.js"
+    "static/css/main.49163e2b.css",
+    "static/js/main.0e184c53.js"
   ]
 }
