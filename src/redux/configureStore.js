@@ -2,15 +2,17 @@ import { legacy_createStore as createStore, combineReducers, applyMiddleware } f
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import missionsReducer from './missions/missions';
-// import dragons from './dragons/dragon';
+import reducerRockets from './rockets/rockets';
 
 // Combine all the reducers into one place
 const rootReducer = combineReducers({
-  // rockets,
+  Rockets: reducerRockets,
   missions: missionsReducer,
-  //   dragons,
 });
 
-const store = createStore(rootReducer, applyMiddleware(thunk, logger));
+const store = createStore(
+  rootReducer,
+  applyMiddleware(thunk, logger),
+);
 
 export default store;
