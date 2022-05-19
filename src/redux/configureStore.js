@@ -4,8 +4,6 @@ import dragons from './dragons/dragon';
 
 // Combine all the reducers into one place
 const rootReducer = combineReducers({
-  // rockets,
-  // missions,
   dragons,
 });
 
