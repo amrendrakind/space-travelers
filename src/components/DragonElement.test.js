@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import store from '../redux/configureStore';
-import DragonElement from './DragonElement';
+import DragonElement from './DragonElement.js';
 
 const dragon = {
   dragon_id: '654',
