@@ -18,3 +18,5 @@ const store = createStore(
 );
 
 export default store;
+
+export { rootReducer };
