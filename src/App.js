@@ -14,8 +14,8 @@ function App() {
       <NavBar />
       <div className="container">
         <Routes>
+          <Route path="/space-travelers" exact="true" element={<Rockets />} />
           <Route path="/missions" element={<MissionsContainer />} />
-          <Route path="/rockets" exact="true" element={<Rockets />} />
           <Route path="/dragons" element={<Dragons />} />
           <Route path="/myprofile" element={<ProfileContainer />} />
           <Route path="*" element={<NotFound />} />

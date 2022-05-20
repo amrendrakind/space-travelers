@@ -7,7 +7,7 @@ const Navbar = () => {
   const links = [
     {
       id: 1,
-      path: '/rockets',
+      path: '/space-travelers',
       text: 'Rockets',
     },
     {
