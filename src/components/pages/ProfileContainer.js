@@ -1,6 +1,6 @@
 import ProfileMissions from '../missions/ProfileMissions';
 import ProfileRocket from '../rockets/ProfileRocket';
-import ProfileDragon from './ProfileDragon';
+import ProfileDragon from '../dragon/ProfileDragon';
 
 const ProfileContainer = () => (
   <div className="profileContainer">
