@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './dragon-profile.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { getDragons } from '../../redux/dragons/Dragons';
+import JoinButton from './JoinButton';
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ const Profile = () => {
           {myDragons.map((dragon) => (
             <div className="MyReserved" key={dragon.id}>
               <h3>{dragon.name}</h3>
+              <JoinButton dragon={dragon} />
             </div>
           ))}
         </ul>
