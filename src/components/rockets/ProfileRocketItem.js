@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import JoinButton from './JoinButton';
 import './Rocket.css';
 
 const ProfileRocketItem = (props) => {
@@ -11,6 +12,7 @@ const ProfileRocketItem = (props) => {
       className="profile-rocket-name"
     >
       <h3>{name}</h3>
+      <JoinButton rocket={rocket} />
     </li>
   );
 };
