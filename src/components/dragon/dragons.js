@@ -7,23 +7,30 @@ import './dragons.css';
 const Dragons = () => {
   const dispatch = useDispatch();
   const dragonsList = useSelector((store) => store.dragons);
+
   useEffect(() => {
     dispatch(getDragons());
-  }, []);
+  }, [dispatch]);
 
   return (
     <section>
       <ul className="dragonsList">
-        {dragonsList.map((dragon) => (
-          <DragonElement
-            key={dragon.dry_mass_kg}
-            id={dragon.id}
-            name={dragon.name}
-            description={dragon.description}
-            flickrImages={dragon.flickr_images[0]}
-            reserved={dragon.reserved}
-          />
-        ))}
+        {dragonsList.map((dragon) => {
+          const {
+            id, name, description, flickr_images, reserved,
+          } = dragon;
+
+          return (
+            <DragonElement
+              key={id}
+              id={id}
+              name={name}
+              description={description}
+              flickrImages={flickr_images[0]}
+              reserved={reserved}
+            />
+          );
+        })}
       </ul>
     </section>
   );
