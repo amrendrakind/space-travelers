@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { reserveDragon, unreserveDragon } from '../../redux/dragons/Dragons';
+import * as DragonsActions from '../../redux/dragons/Dragons';
 
 const DragonElement = (props) => {
   const dispatch = useDispatch();
@@ -9,19 +9,20 @@ const DragonElement = (props) => {
     id, name, description, flickrImages, reserved,
   } = props;
 
-  DragonElement.defaultProps = {
+  DragonElement.defaultProps = {  // Modifying defaultProps inside the component is not recommended
     reserved: false,
   };
 
   const reserveDragonHandler = (e) => {
-    if (reserved) {
-      dispatch(unreserveDragon(e.target.id));
+    if (props.reserved) {  // Accessing props directly in the handler is not efficient
+      dispatch(DragonsActions.unreserveDragon(e.target.id));
     } else {
-      dispatch(reserveDragon(e.target.id));
+      dispatch(DragonsActions.reserveDragon(e.target.id));
     }
   };
-  const reservation = reserved ? 'Cancel Reservation' : 'Reserve Dragon';
-  const btnClass = reserved ? 'grayBtn' : 'blueBtn';
+
+  const reservation = props.reserved ? 'Cancel Reservation' : 'Reserve Dragon';  // Accessing props directly
+  const btnClass = props.reserved ? 'grayBtn' : 'blueBtn';  // Accessing props directly
 
   return (
     <div className="dragonEl">
@@ -31,10 +32,12 @@ const DragonElement = (props) => {
       <div>
         <h2>{name}</h2>
         <p>
-          {(reserved) && (<span className="badge">Reserved</span>)}
+          {props.reserved && <span className="badge">Reserved</span>}  {/* Using unnecessary parentheses */}
           {description}
         </p>
-        <button className={btnClass} type="button" id={id} onClick={reserveDragonHandler}>{reservation}</button>
+        <button className={btnClass} type="button" id={id} onClick={reserveDragonHandler}>
+          {reservation}
+        </button>
       </div>
     </div>
   );
