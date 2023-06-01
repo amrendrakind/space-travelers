@@ -1,12 +1,14 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+
 import './App.css';
-import NotFound from './components/pages/NotFound';
+
 import Dragons from './components/dragon/dragons';
 import MissionsContainer from './components/pages/MissionsContainer';
-import Rockets from './components/rockets/Rockets';
 import NavBar from './components/navbar/NavBar';
+import NotFound from './components/pages/NotFound';
 import ProfileContainer from './components/pages/ProfileContainer';
+import Rockets from './components/rockets/Rockets';
 
 function App() {
   return (
