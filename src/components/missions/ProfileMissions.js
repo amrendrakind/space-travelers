@@ -1,3 +1,4 @@
+import React from 'react';
 import { useSelector } from 'react-redux';
 import JoinButton from './JoinButton';
 
@@ -6,24 +7,22 @@ const ProfileMissions = () => {
   const filteredMissions = missions.filter((mission) => mission.isJoined);
 
   const renderList = () => {
-    if (filteredMissions.length) {
-      return filteredMissions.map((mission) => (
-        <li key={mission.mission_id} className="Li">
-          <p className="paragraph">
-            {mission.mission_name}
-            {' — '}
-            <a
-              href={mission.wikipedia}
-              target="_blank"
-              rel="noreferrer"
-              className="details"
-            >
-              Read more
-            </a>
-          </p>
-          <JoinButton isJoined={mission.isJoined} id={mission.mission_id} />
-        </li>
-      ));
+    if (filteredMissions.length > 0) {
+      return filteredMissions.map((mission) => {
+        const { mission_id, mission_name, wikipedia, isJoined } = mission;
+
+        return (
+          <li key={mission_id} className="Li">
+            <p className="paragraph">
+              {mission_name} —{' '}
+              <a href={wikipedia} target="_blank" rel="noreferrer" className="details">
+                Read more
+              </a>
+            </p>
+            <JoinButton isJoined={isJoined} id={mission_id} />
+          </li>
+        );
+      });
     }
     return <li className="not-joined">No missions joined</li>;
   };
