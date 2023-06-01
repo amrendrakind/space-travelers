@@ -29,22 +29,21 @@ const Navbar = () => {
 
   return (
     <nav className="nav-bar">
-
       <div className="brand-logo-container">
-        <img className="spacelogo" src={image} alt="spacelogo" />
+        <img className="spacelogo" src={image} alt="SpaceLogo" />
         <h2 className="nav-brand">Space Travellers&apos; Hub</h2>
       </div>
       <ul className="nav-links">
         {links.map((link) => (
           <li className="nav-link" key={link.id}>
-            <NavLink to={link.path}>
+            <NavLink to={link.path} activeClassName="active">
               {link.text}
             </NavLink>
           </li>
         ))}
-
       </ul>
     </nav>
   );
 };
+
 export default Navbar;
