@@ -1,10 +1,10 @@
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import { reserveDragon, unreserveDragon } from '../../redux/dragons/Dragons';
 
-const JoinButton = (props) => {
-  const { dragon } = props;
+const JoinButton = ({ dragon }) => {
   const { id, reserved } = dragon;
   const dispatch = useDispatch();
 
@@ -16,25 +16,21 @@ const JoinButton = (props) => {
     }
   };
 
+  const variant = reserved ? 'outline-danger' : 'outline-primary';
+  const buttonContent = reserved ? 'Cancel Reservation' : 'Reserve Dragon';
+
   return (
-    <Button
-      onClick={clickHandler}
-      type="button"
-      variant={reserved ? 'outline-danger' : 'outline-primary'}
-    >
-      Cancel Reservation
+    <Button onClick={clickHandler} type="button" variant={variant}>
+      {buttonContent}
     </Button>
   );
 };
 
 JoinButton.propTypes = {
-  dragon:
-        PropTypes.objectOf(
-          {
-            id: PropTypes.number,
-            reserved: PropTypes.string,
-          },
-        ).isRequired,
+  dragon: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    reserved: PropTypes.bool.isRequired,
+  }).isRequired,
 };
 
 export default JoinButton;
