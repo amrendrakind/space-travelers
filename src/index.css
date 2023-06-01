@@ -25,3 +25,55 @@ code {
     'Courier New',
     monospace;
 }
+
+.profileContainer {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.wrapper {
+  width: auto;
+}
+
+.my-missions {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.Li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #9b9a9a;
+  color: black;
+  margin-top: -1px;
+  margin-left: -2.5rem;
+  padding: 1rem 1rem;
+  height: 4rem;
+}
+
+.not-joined {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  border: 1px solid #9b9a9a;
+  color: #9b9a9a;
+  margin-top: -1px;
+  margin-left: -2.5rem;
+  padding: 1rem 1rem;
+  height: 16rem;
+}
+
+.paragraph {
+  margin: 0;
+}
+
+.details {
+  padding: 5px;
+}
+
+.details:hover {
+  text-decoration: none;
+}
