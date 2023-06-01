@@ -1,28 +1,21 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import * as DragonsActions from '../../redux/dragons/Dragons';
+import { reserveDragon, unreserveDragon } from '../../redux/dragons/Dragons';
 
-const DragonElement = (props) => {
+const DragonElement = ({ id, name, description, flickrImages, reserved }) => {
   const dispatch = useDispatch();
-  const {
-    id, name, description, flickrImages, reserved,
-  } = props;
 
-  DragonElement.defaultProps = {  // Modifying defaultProps inside the component is not recommended
-    reserved: false,
-  };
-
-  const reserveDragonHandler = (e) => {
-    if (props.reserved) {  // Accessing props directly in the handler is not efficient
-      dispatch(DragonsActions.unreserveDragon(e.target.id));
+  const reserveDragonHandler = () => {
+    if (reserved) {
+      dispatch(unreserveDragon(id));
     } else {
-      dispatch(DragonsActions.reserveDragon(e.target.id));
+      dispatch(reserveDragon(id));
     }
   };
 
-  const reservation = props.reserved ? 'Cancel Reservation' : 'Reserve Dragon';  // Accessing props directly
-  const btnClass = props.reserved ? 'grayBtn' : 'blueBtn';  // Accessing props directly
+  const reservation = reserved ? 'Cancel Reservation' : 'Reserve Dragon';
+  const btnClass = reserved ? 'grayBtn' : 'blueBtn';
 
   return (
     <div className="dragonEl">
@@ -32,10 +25,10 @@ const DragonElement = (props) => {
       <div>
         <h2>{name}</h2>
         <p>
-          {props.reserved && <span className="badge">Reserved</span>}  {/* Using unnecessary parentheses */}
+          {reserved && <span className="badge">Reserved</span>}
           {description}
         </p>
-        <button className={btnClass} type="button" id={id} onClick={reserveDragonHandler}>
+        <button className={btnClass} type="button" onClick={reserveDragonHandler}>
           {reservation}
         </button>
       </div>
@@ -43,12 +36,16 @@ const DragonElement = (props) => {
   );
 };
 
+DragonElement.defaultProps = {
+  reserved: false,
+};
+
 DragonElement.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  reserved: PropTypes.bool,
   description: PropTypes.string.isRequired,
   flickrImages: PropTypes.string.isRequired,
+  reserved: PropTypes.bool,
 };
 
 export default DragonElement;
